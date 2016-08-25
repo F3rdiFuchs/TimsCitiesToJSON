@@ -14,9 +14,6 @@ namespace worldcities4Tim
         {
             ReadThread readThread = new ReadThread();
             readThread.openFile();
-            //Thread thread1;
-            //thread1 = new Thread(new ThreadStart(readThread.openFile));
-            //thread1.Start();
         }
     }
 }
