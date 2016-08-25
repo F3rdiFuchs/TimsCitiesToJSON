@@ -121,8 +121,10 @@ namespace worldcities4Tim
         public void saveJson(int count)
         {
             string json = JsonConvert.SerializeObject(list);
-            StreamWriter writer = new StreamWriter("C:\\log" + count + ".json", true);
-            writer.Write(json);
+            using (StreamWriter writer = new StreamWriter("C:\\log" + count + ".json"))
+            {
+                writer.Write(json);
+            }   
             list.clearList();
         }
     }
